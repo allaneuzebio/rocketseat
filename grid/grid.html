@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh;
+            display:grid;
+            grid-template-areas: 
+            "header header"
+            "main aside"
+            "footer footer";
+            /*eles viram duas colunas, então ali estou dizendo que o header vai ocupar duas colunas assim como o footer, já o main vai ocupar uma coluna e o aside outra coluna ao lado*/
+
+            grid-template-rows: 30px 1fr 30px;
+            /* aqui define a altura das linhas, seguindo a mesma ordem do grid, fr=fração (vai ocupar todo o espaço restante)*/
+
+            grid-template-columns: 1fr 80px;
+        }
+        header {
+            grid-area: header;
+            /* aqui eu preciso dizer qual área essa parte representa, para dar um direcionamento ao código do body*/
+            background-color: green;
+        }
+        main {
+            grid-area: main;
+            background-color: rgba(255, 0, 0, 0.774);
+        }
+        aside {
+            grid-area: aside;
+            background-color: rgba(66, 66, 212, 0.877);
+        }
+        footer {
+            grid-area: footer;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <header>Topo</header>
+    <main>Conteúdo</main>
+    <Aside>Infos adicionais</Aside>
+    <footer>Rodapé</footer>
+</body>
+</html>
